@@ -14,7 +14,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht == NULL || key == NULL || strlen(key) == 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	index = hash_djb2((const unsigned char *)key) % ht->size;
@@ -24,10 +24,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (strcmp(current->key, key) == 0)
 		{
-			return current->value;
+			return (current->value);
 		}
 		current = current->next;
 	}
 
-	return NULL;
+	return (NULL);
 }

@@ -21,6 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *current = ht->array[i];
+
 		while (current != NULL)
 		{
 			if (!is_first)
